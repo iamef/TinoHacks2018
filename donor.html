@@ -36,14 +36,15 @@
 	<h1>What is it that you want to donate?</h1>
 	
 	<ul>
-		<li class="itemCategory item" id="itemAppliances" onclick=appliancesOnClick()>Appliances</li>
+		<li class="itemCategory item" onclick=itemCategoryOnClick("appliancePopup")>Appliances</li>
 			<div class="categoryDonations item" id="appliancePopup">
 				<p>Places to donate: </p>
 				<a href="https://satruck.org/">The Salvation Army</a>
 				<p>Interested folks:</p>
-				<p>Emily Fan (Click <a href="Emily.html">here</a> for bio and contact information.)</p>
+				<p>Emily Fan (Click <a href="Emily.html">here</a>MAKE THIS LINK WORK for bio and contact information.)</p>
 			</div>
     	<li class="itemCategory item">Bikes</li>
+    	
 		<li class="itemCategory item">Books</li>
 		<li class="itemCategory item">Canned Food</li>
     	<li class="itemCategory item">Clothing</li>
@@ -52,13 +53,12 @@
     </ul>
     
     <script>
-		//document.getElementById("itemAppliances").onclick=appliancesOnClick;
-		
-		function appliancesOnClick(){
-			if(document.getElementById("appliancePopup").style.display == "none"){
-				document.getElementById("appliancePopup").style.display="block";
+				
+		function itemCategoryOnClick(idString){
+			if(document.getElementById(idString).style.display == "none"){
+				document.getElementById(idString).style.display="block";
 			}else{
-				document.getElementById("appliancePopup").style.display="none";
+				document.getElementById(idString).style.display="none";
 			}
 		}
 		
