@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <title>Donors</title>
+  
+	<style>
+		h1{
+			text-align: center;
+		}
+		
+		.item{
+			margin: 5px;
+			padding: 10px;
+		}
+		
+		.itemCategory{
+			list-style: none;
+			text-align: center;
+			background-color: powderblue;
+			
+		}
+		
+		.itemCategory:hover{
+			background-color: deepskyblue;
+		}
+		
+		.categoryDonations{
+			display: none;
+			background-color: aliceblue;
+		}
+    </style>
+</head>
+
+<body>
+	<h1>What is it that you want to donate?</h1>
+	
+	<ul>
+		<li class="itemCategory item" id="itemAppliances" onclick=appliancesOnClick()>Appliances</li>
+			<div class="categoryDonations item" id="appliancePopup">
+				<p>Places to donate: </p>
+				<a href="https://satruck.org/">The Salvation Army</a>
+				<p>Interested folks:</p>
+				<p>Emily Fan (Click <a href="Emily.html">here</a> for bio and contact information.)</p>
+			</div>
+    	<li class="itemCategory item">Bikes</li>
+		<li class="itemCategory item">Books</li>
+		<li class="itemCategory item">Canned Food</li>
+    	<li class="itemCategory item">Clothing</li>
+		<li class="itemCategory item">Electronic Devices</li>
+		<li class="itemCategory item">Furniture</li>
+    </ul>
+    
+    <script>
+		//document.getElementById("itemAppliances").onclick=appliancesOnClick;
+		
+		function appliancesOnClick(){
+			if(document.getElementById("appliancePopup").style.display == "none"){
+				document.getElementById("appliancePopup").style.display="block";
+			}else{
+				document.getElementById("appliancePopup").style.display="none";
+			}
+		}
+		
+	</script>
+</body>
+</html>
