@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA2PneCVrqWWpYZ2dc4DqsDjpgx9-LqD0A",
+    authDomain: "beleaf-757a3.firebaseapp.com",
+    databaseURL: "https://beleaf-757a3.firebaseio.com",
+    projectId: "beleaf-757a3",
+    storageBucket: "beleaf-757a3.appspot.com",
+    messagingSenderId: "137843209902"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<title>BeLEAF</title>
+<link rel="icon" href="logo2.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="home.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" type="text/css" href="home.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button" style="color:black">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small" style="color:black"><i class="fa fa-leaf" style="color:black"></i> ABOUT</a>
+    <a href="#Explore" class="w3-bar-item w3-button w3-hide-small"style="color:black"><i class="fa fa-globe"style="color:black"></i> EXPLORE</a>
+    <a href="loginsignup.html" class="w3-bar-item w3-button w3-hide-small"style="color:black"><i class="fa fa-sign-in"style="color:black"></i> Sign Up</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="#Explore" class="w3-bar-item w3-button" onclick="toggleFunction()">Explore</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <img id="logo" class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity" src="logo.png">
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">Welcome!</h3>
+  <p class="w3-center"><em>About BeLEAF</em></p>
+  <p>BeLEAF is created to give the old things you want to throw away a second life. It not only allows people to find non-profit shops to donate their item to, but also enables them to upload their products on BeLEAF to donate/sell to buyers. The latter option allows a intimate connection to form between the buyers and sellers. BeLEAF exists as a platform for people who are financially limited, to shop for free or very cheap items. As the old saying goes, "one man's trash is another's gold". We hope that through this website people will find happiness in life.</p>
+
+</div>
+
+
+
+<!-- Third Parallax Image with Portfolio Text -->
+<div id="Explore" class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span  class="w3-xxlarge w3-text-white w3-wide" style="margin-left: 12px">EXPLORE</span>
+     <br>
+     <a href="#home" class="w3-button w3-light-grey">Browse</a>
+     <div class="divider"></div>
+     <a href="#home" class="w3-button w3-light-grey">Donate/Sell</a>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center">Login</h3>
+  <p class="w3-center"><em>Welcome Back!</em></p>
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m2 w3-container">
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input id="Username" class="w3-input w3-border" type="text" placeholder="Username" required name="Username">
+          </div>
+          <div class="w3-half">
+            <input id="password" class="w3-input w3-border" type="text" placeholder="Password" required name="Password">
+          </div>
+        </div>
+        <button id="submit" class="w3-button w3-black w3-right w3-section" type="submit" onclick="location.href="thankyou.html"">
+          <i class="fa fa-sign-in"></i> Login
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+
+</footer>
+
+<!-- Add Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+
+</body>
+</html>
