@@ -1,23 +1,12 @@
 <!DOCTYPE html>
 <html>
-<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyA2PneCVrqWWpYZ2dc4DqsDjpgx9-LqD0A",
-    authDomain: "beleaf-757a3.firebaseapp.com",
-    databaseURL: "https://beleaf-757a3.firebaseio.com",
-    projectId: "beleaf-757a3",
-    storageBucket: "beleaf-757a3.appspot.com",
-    messagingSenderId: "137843209902"
-  };
-  firebase.initializeApp(config);
-</script>
+
 
 <title>BeLEAF</title>
 <link rel="icon" href="logo2.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
 <script src="home.js"></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" type="text/css" href="home.css">
@@ -35,7 +24,7 @@
     <a href="#home" class="w3-bar-item w3-button" style="color:black"><i class="fa fa-home"style="color:black"></i> HOME</a>
     <a href="#about" class="w3-bar-item w3-button w3-hide-small" style="color:black"><i class="fa fa-leaf" style="color:black"></i> ABOUT</a>
     <a href="#Explore" class="w3-bar-item w3-button w3-hide-small"style="color:black"><i class="fa fa-globe"style="color:black"></i> EXPLORE</a>
-    <a href="loginsignup.html" class="w3-bar-item w3-button w3-hide-small"style="color:black"><i class="fa fa-sign-in"style="color:black"></i> Sign Up</a>
+    <a href="loginsignup.html" class="w3-bar-item w3-button w3-hide-small"style="color:black"><i class="fa fa-sign-in"style="color:black"></i> Login/Sign Up</a>
   </div>
 
   <!-- Navbar on small screens -->
@@ -75,23 +64,30 @@
 
 <!-- Container (Contact Section) -->
 <div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">Login</h3>
-  <p class="w3-center"><em>Welcome Back!</em></p>
+  <h3 class="w3-center">Login / Sign Up</h3>
   <div class="w3-row w3-padding-32 w3-section">
     <div class="w3-col m2 w3-container">
     </div>
     <div class="w3-col m8 w3-panel">
       <form action="/action_page.php" target="_blank">
-        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+        <div class="w3-row-padding container" style="margin:0 -16px 8px -16px">
           <div class="w3-half">
-            <input id="Username" class="w3-input w3-border" type="text" placeholder="Username" required name="Username">
+            <input id="txtEmail" class="w3-input w3-border" type="email" placeholder="Email" required name="email">
           </div>
           <div class="w3-half">
-            <input id="password" class="w3-input w3-border" type="text" placeholder="Password" required name="Password">
+            <input id="txtPassword" class="w3-input w3-border" type="password" placeholder="Password" required name="Password">
           </div>
         </div>
-        <button id="submit" class="w3-button w3-black w3-right w3-section" type="submit" onclick="location.href="thankyou.html"">
-          <i class="fa fa-sign-in"></i> Login
+        <button id="btnLogin" class="w3-button w3-black w3-right w3-section btn btn-action">
+          <i class="fa fa-angle-double-right"></i> Login
+        </button>
+        <div class="divider w3-right"></div>
+        <button id="btnSignUp" class="w3-button w3-black w3-section w3-right btn btn-secondary">
+          <i class="fa fa-plus"></i> Sign Up
+        </button>
+        <br></br>
+        <button id="btnLogout" class="w3-button w3-black w3-section w3-right btn btn-action hide">
+          <i class="fa fa-sign-out"></i> Logout
         </button>
       </form>
     </div>
@@ -111,9 +107,10 @@
   </div>
 
 </footer>
+<script src="app.js"></script>
 
-<!-- Add Google Maps -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+//Post and hello... html postform
+
 
 </body>
 </html>
