@@ -6,7 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="home.js"></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" type="text/css" href="home.css">
+<link rel="stylesheet" type="text/css" href="buyer.css">
+<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -21,43 +22,59 @@
     <a href="home.html" class="w3-bar-item w3-button" style="color:black"><i class="fa fa-home"style="color:black"></i> HOME</a>
     <a href="home.html#about" class="w3-bar-item w3-button w3-hide-small" style="color:black"><i class="fa fa-leaf" style="color:black"></i> ABOUT</a>
     <a href="home.html#Explore" class="w3-bar-item w3-button w3-hide-small"style="color:black"><i class="fa fa-globe"style="color:black"></i> EXPLORE</a>
-    <a href="loginsignup.html" class="w3-bar-item w3-button w3-hide-small"style="color:black"><i class="fa fa-plus"style="color:black"></i> Sign Up</a>
+    <a href="loginsignup.html" class="w3-bar-item w3-button w3-hide-small"style="color:black"><i class="fa fa-sign-in"style="color:black"></i> Login/Sign Up</a>
   </div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
     <a href="home.html#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
     <a href="home.html#Explore" class="w3-bar-item w3-button" onclick="toggleFunction()">EXPLORE</a>
-    <a href="loginsignup.html" class="w3-bar-item w3-button w3-hide-small"style="color:black"><i class="fa fa-plus"style="color:black"></i> Sign Up</a>
+    <a href="loginsignup.html" class="w3-bar-item w3-button w3-hide-small"style="color:black"><i class="fa fa-sign-in"style="color:black"></i> Login/Sign Up</a>
   </div>
 </div>
 
-<!-- Container (Contact Section) -->
-<div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">Sign Up</h3>
-  <p class="w3-center"><em>Join Our Community!</em></p>
 
+<div id="products" class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span  class="w3-xxlarge w3-text-white w3-wide">Welcome!</span>
+
+  </div>
+</div>
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="login_div">
+  <h3 class="w3-center">Login / Sign Up</h3>
   <div class="w3-row w3-padding-32 w3-section">
     <div class="w3-col m2 w3-container">
     </div>
-    <div class="w3-col m8 w3-panel">
-      <form action="/action_page.php" target="_blank">
-        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+    <!-- <div class="w3-col m8 w3-panel"> -->
+      <!-- <form action="/action_page.php" target="_blank"> -->
+        <div class="w3-row-padding container" style="margin:0 -16px 8px -16px">
           <div class="w3-half">
-            <input id="name" class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            <input id="email_field" class="w3-input w3-border" type="email" placeholder="Email"  id="email_field"/>
           </div>
           <div class="w3-half">
-            <input id="email" class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            <input id="password_field" class="w3-input w3-border" type="password" placeholder="Password"  name="Password" id="password_field"/>
           </div>
         </div>
-        <input id="message" class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-        <button id="submit" class="w3-button w3-black w3-right w3-section" type="submit" href="thankyou.html">
+        <button onclick="login()" class="w3-black w3-right w3-section">
+          <i class="fa fa-angle-double-right"></i> Login
+        </button>
+        <div class="divider w3-right"></div>
+        <button onclick="create_account()" class=" w3-black w3-section w3-right">
           <i class="fa fa-plus"></i> Sign Up
         </button>
-      </form>
-    </div>
+      </div>
   </div>
-</div>
+    <div id="user_div" class="w3-content w3-container w3-padding-64 loggedin-div">
+      <h3 id = "welcome">Welcome!</h3>
+    <p id="user_para">You're currently logged in.</p>
+        <button onclick="logout()" class="w3-black w3-section w3-right">
+          <i class="fa fa-sign-out"></i> Logout
+        </button>
+      <!-- </form> -->
+    </div>
+
+
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
@@ -72,9 +89,21 @@
   </div>
 
 </footer>
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA2PneCVrqWWpYZ2dc4DqsDjpgx9-LqD0A",
+    authDomain: "beleaf-757a3.firebaseapp.com",
+    databaseURL: "https://beleaf-757a3.firebaseio.com",
+    projectId: "beleaf-757a3",
+    storageBucket: "beleaf-757a3.appspot.com",
+    messagingSenderId: "137843209902"
+  };
+  firebase.initializeApp(config);
+</script>
+  <script src="index.js"></script>
 
-<!-- Add Google Maps -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
 
 </body>
 </html>
