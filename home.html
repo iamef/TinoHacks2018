@@ -6,13 +6,10 @@
 <link rel="icon" href="logo2.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
-<script src="home.js"></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" type="text/css" href="home.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 <body>
 
 <!-- Navbar (sit on top) -->
@@ -45,7 +42,7 @@
 <div class="w3-content w3-container w3-padding-64" id="about">
   <h3 class="w3-center">Welcome!</h3>
   <p class="w3-center"><em>About BeLEAF</em></p>
-  <p>BeLEAF is created to give the old things you want to throw away a second life. It not only allows people to find non-profit shops to donate their item to, but also enables them to upload their products on BeLEAF to donate/sell to buyers. The latter option allows a intimate connection to form between the buyers and sellers. BeLEAF exists as a platform for people who are financially limited, to shop for free or very cheap items. As the old saying goes, "one man's trash is another's gold". We hope that through this website people will find happiness in life.</p>
+  <p>BeLEAF is created to give the old things you want to throw away a second life. It not only allows people to find non-profit shops to donate their item to, but also enables them to upload their products on BeLEAF to donate to buyers. The latter option allows a intimate connection to form between the buyers and donors. BeLEAF exists as a platform for people who are financially limited, to shop for free or very cheap items. As the old saying goes, "one man's trash is another's gold". We hope that through this website people will find happiness in life.</p>
 
 </div>
 
@@ -54,12 +51,16 @@
 <!-- Third Parallax Image with Portfolio Text -->
 <div id="Explore" class="bgimg-3 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
-     <span  class="w3-xxlarge w3-text-white w3-wide" style="margin-left: 12px">EXPLORE</span>
+     <span  class="w3-xxlarge w3-text-white w3-wide">EXPLORE</span>
      <br>
-     <a href="#home" class="w3-button w3-light-grey">Browse</a>
+     <a href="buyer.html" class="w3-button w3-light-grey">Browse</a>
      <div class="divider"></div>
-     <a href="#home" class="w3-button w3-light-grey">Donate/Sell</a>
+     <a class="w3-button w3-light-grey" href="donor.html" >Donate</a>
+
   </div>
+
+
+
 </div>
 
 <!-- Container (Contact Section) -->
@@ -109,8 +110,10 @@
 </footer>
 <script src="app.js"></script>
 
-//Post and hello... html postform
+<!-- //Post and hello... html postform -->
 
 
 </body>
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script src="home.js"></script>
 </html>
