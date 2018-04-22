@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<title>Browse</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="icon" href="logo2.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script src="home.js"></script>
+<link rel="stylesheet" type="text/css" href="buyer.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="buyer.js"></script>
+<body>
+
+    <div class="w3-top">
+      <div class="w3-bar" id="myNavbar">
+        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="home.html#home" class="w3-bar-item w3-button" style="color:black"><i class="fa fa-home"style="color:black"></i> HOME</a>
+        <a href="home.html#about" class="w3-bar-item w3-button w3-hide-small" style="color:black"><i class="fa fa-leaf" style="color:black"></i> ABOUT</a>
+        <a href="home.html#Explore" class="w3-bar-item w3-button w3-hide-small"style="color:black"><i class="fa fa-globe"style="color:black"></i> EXPLORE</a>
+        <a href="loginsignup.html" class="w3-bar-item w3-button w3-hide-small"style="color:black"><i class="fa fa-sign-in"style="color:black"></i> Login/Sign Up</a>
+      </div>
+
+      <!-- Navbar on small screens -->
+      <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+        <a href="home.html#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+        <a href="home.html#Explore" class="w3-bar-item w3-button" onclick="toggleFunction()">Explore</a>
+        <a href="loginsignup.html" class="w3-bar-item w3-button w3-hide-small"style="color:black"><i class="fa fa-sign-in"style="color:black"></i> Login/Sign Up</a>
+      </div>
+    </div>
+  <!-- !PAGE CONTENT! -->
+  <div id="products" class="bgimg-3 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+       <span  class="w3-xxlarge w3-text-white w3-wide">Products</span>
+
+    </div>
+  </div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter">
+      <img src="https://shop.r10s.jp/rushout/cabinet/14aug21/tsv14071280b.jpg" >
+    </div>
+    <div class="w3-quarter">
+      <img src="https://sc01.alicdn.com/kf/UT81Dy6XaxbXXagOFbXg/180772800/UT81Dy6XaxbXXagOFbXg.jpg">
+
+    </div>
+    <div class="w3-quarter">
+      <img src="https://4.bp.blogspot.com/-8wvFRtBpqVM/Wlu7D64BkMI/AAAAAAAAGIc/2S_XU1K4k8cA9hJ997D9Xkcg-Zk-8uZjACLcBGAs/s1600/Screenshot%2B2018-01-14%2Bat%2B10.14.33%2BPM.png" >
+      <!-- <h3>Cherries, interrupted</h3>
+      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+      <p>What else?</p> -->
+    </div>
+    <div class="w3-quarter">
+      <img src="https://bongbongbooks.files.wordpress.com/2016/10/group4.jpg">
+      <!-- <h3>Once Again, Robust Wine and Vegetable Pasta</h3>
+      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p> -->
+    </div>
+  </div>
+
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/eBwAAOSwT2daCtzm/$_75.JPG">
+      <!-- <h3>All I Need Is a Popsicle</h3>
+      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p> -->
+    </div>
+    <div class="w3-quarter">
+      <img src="https://c.76.my/Malaysia/9733-buy-2nd-hand-samsung-galaxy-mega-6-3-i9205-16gb-ori-sme-pdatradezone-1601-05-PDAtradezone@1.jpg" >
+      <!-- <h3>Salmon For Your Skin</h3>
+      <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p> -->
+    </div>
+    <div class="w3-quarter">
+      <img src="https://used.com.ph/uploads/images/1383797056-desktop.jpg" >
+      <!-- <h3>The Perfect Sandwich, A Real Classic</h3>
+      <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p> -->
+    </div>
+    <div class="w3-quarter">
+      <img src="https://nessbow.files.wordpress.com/2013/09/dscf8874.jpg">
+      <!-- <h3>Le French</h3>
+      <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p> -->
+    </div>
+  </div>
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="https://s-media-cache-ak0.pinimg.com/originals/4e/00/34/4e003462589e6705276fd60586e33c73.jpg">
+      <!-- <h3>All I Need Is a Popsicle</h3>
+      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p> -->
+    </div>
+    <div class="w3-quarter">
+      <img src="https://ecs7.tokopedia.net/img/cache/700/product-1/2017/1/12/372270/372270_0e890a06-7901-4839-82eb-c7817e925fd3.jpg" >
+      <!-- <h3>Salmon For Your Skin</h3>
+      <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p> -->
+    </div>
+    <div class="w3-quarter">
+      <img src="https://s3-media2.fl.yelpcdn.com/bphoto/5fnw0_GSHMWH_l9JqnepPg/ls.jpg">
+      <!-- <h3>The Perfect Sandwich, A Real Classic</h3>
+      <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p> -->
+    </div>
+    <div class="w3-quarter">
+      <img src="https://i.ebayimg.com/00/s/OTk5WDc0OQ==/z/OFkAAOSwjyhaMu~K/$_1.JPG">
+      <!-- <h3>Le French</h3>
+      <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p> -->
+    </div>
+  </div>
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
