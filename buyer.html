@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<title>BeLEAF</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="icon" href="logo2.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script src="home.js"></script>
+<link rel="stylesheet" type="text/css" href="buyer.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="buyer.js"></script>
+
+<body>
+
+  <div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="home.html#home" class="w3-bar-item w3-button" style="color:black"><i class="fa fa-home"style="color:black"></i> HOME</a>
+      <a href="home.html#about" class="w3-bar-item w3-button w3-hide-small" style="color:black"><i class="fa fa-leaf" style="color:black"></i> ABOUT</a>
+      <a href="home.html#Explore" class="w3-bar-item w3-button w3-hide-small"style="color:black"><i class="fa fa-globe"style="color:black"></i> EXPLORE</a>
+      <a href="loginsignup.html" class="w3-bar-item w3-button w3-hide-small"style="color:black"><i class="fa fa-sign-in"style="color:black"></i> Login/Sign Up</a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+      <a href="home.html#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+      <a href="home.html#Explore" class="w3-bar-item w3-button" onclick="toggleFunction()">Explore</a>
+    </div>
+  </div>
+<!-- !PAGE CONTENT! -->
+<div id="products" class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span  class="w3-xxlarge w3-text-white w3-wide">Products</span>
+
+  </div>
+</div>
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px ">
+<h3 class="w3-center w3-padding-16">Suggested Stores</h3>
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter">
+      <img src="https://png.pngtree.com/element_origin_min_pic/16/07/18/15578c8c15c78a4.jpg" style="width:100%">
+      <h3>Household Appliances</h3>
+      <a href="https://satruck.org/">Salvation Army</a>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://www.gizbot.com/img/2016/01/tabletcomputer-12-1452593050.jpg" style="width:100%">
+      <h3>Electronics</h3>
+      <a href="http://www.ecyclingcentral.com/">E-cycling Central</a>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://d2ul0w83gls0j4.cloudfront.net/taxonomy/300/0102/20171024151632.jpg" style="width:100%">
+      <h3>Clothes</h3>
+      <a href="http://www.goodwill.org/">Goodwill</a>
+    </div>
+    <div class="w3-quarter">
+      <img src="logo2.png" style="width:50%">
+      <h3>From BeLEAF</h3>
+      <a href="">Shop <i class="fa fa-arrow-right"></i></a>
+    </div>
+  </div>
+
+
+  <!-- Pagination -->
+
+  <hr>
+
+  <!-- Footer -->
+
+
+<!-- End page content -->
+</div>
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+
+</footer>
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
